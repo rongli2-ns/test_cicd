@@ -1,0 +1,19 @@
+# This is a Databricks asset bundle definition for test_cicd.
+# The Databricks extension requires databricks.yml configuration file.
+# See https://docs.databricks.com/dev-tools/bundles/index.html for documentation.
+
+bundle:
+  name: test_cicd
+
+targets:
+  dev:
+    mode: development
+    default: true
+    workspace:
+      host: https://nscorp-dev.cloud.databricks.com
+
+  ## Optionally, there could be 'staging' or 'prod' targets here.
+  #
+  # prod:
+  #   workspace:
+  #     host: https://nscorp-dev.cloud.databricks.com

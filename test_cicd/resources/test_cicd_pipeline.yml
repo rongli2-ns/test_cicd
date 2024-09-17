@@ -1,0 +1,12 @@
+# The main pipeline for test_cicd
+resources:
+  pipelines:
+    test_cicd_pipeline:
+      name: test_cicd_pipeline
+      target: test_cicd_${bundle.environment}
+      libraries:
+        - notebook:
+            path: ../src/dlt_pipeline.ipynb
+
+      configuration:
+        bundle.sourcePath: /Workspace/${workspace.file_path}/src
